@@ -21,12 +21,12 @@ const HomePage = () => {
 	}, [fetchFeaturedProducts]);
 
 	return (
-		<div className='relative min-h-screen text-white overflow-hidden'>
+		<div className='relative min-h-screen bg-gradient-to-b from-[#FDD4DA] to-[#FED7C3] text-[#4B0F1F] overflow-hidden'>
 			<div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
-				<h1 className='text-center text-5xl sm:text-6xl font-bold text-emerald-400 mb-4'>
+				<h1 className='text-center text-5xl sm:text-6xl font-bold text-[#E09AAE] mb-4'>
 					Explore Our Categories
 				</h1>
-				<p className='text-center text-xl text-gray-300 mb-12'>
+				<p className='text-center text-xl text-[#D28A98] mb-12'>
 					Discover the latest trends in eco-friendly fashion
 				</p>
 
@@ -41,4 +41,5 @@ const HomePage = () => {
 		</div>
 	);
 };
+
 export default HomePage;

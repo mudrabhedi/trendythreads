@@ -36,41 +36,41 @@ const OrderSummary = () => {
 
 	return (
 		<motion.div
-			className='space-y-4 rounded-lg border border-gray-700 bg-gray-800 p-4 shadow-sm sm:p-6'
+			className='space-y-4 rounded-lg border border-[#FED7C3] bg-[#FEE2E2] p-4 shadow-sm sm:p-6'
 			initial={{ opacity: 0, y: 20 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.5 }}
 		>
-			<p className='text-xl font-semibold text-emerald-400'>Order summary</p>
+			<p className='text-xl font-semibold text-[#E09AAE]'>Order Summary</p>
 
 			<div className='space-y-4'>
 				<div className='space-y-2'>
 					<dl className='flex items-center justify-between gap-4'>
-						<dt className='text-base font-normal text-gray-300'>Original price</dt>
-						<dd className='text-base font-medium text-white'>${formattedSubtotal}</dd>
+						<dt className='text-base font-normal text-[#4B0F1F]'>Original Price</dt>
+						<dd className='text-base font-medium text-[#4B0F1F]'>${formattedSubtotal}</dd>
 					</dl>
 
 					{savings > 0 && (
 						<dl className='flex items-center justify-between gap-4'>
-							<dt className='text-base font-normal text-gray-300'>Savings</dt>
-							<dd className='text-base font-medium text-emerald-400'>-${formattedSavings}</dd>
+							<dt className='text-base font-normal text-[#4B0F1F]'>Savings</dt>
+							<dd className='text-base font-medium text-[#E09AAE]'>-${formattedSavings}</dd>
 						</dl>
 					)}
 
 					{coupon && isCouponApplied && (
 						<dl className='flex items-center justify-between gap-4'>
-							<dt className='text-base font-normal text-gray-300'>Coupon ({coupon.code})</dt>
-							<dd className='text-base font-medium text-emerald-400'>-{coupon.discountPercentage}%</dd>
+							<dt className='text-base font-normal text-[#4B0F1F]'>Coupon ({coupon.code})</dt>
+							<dd className='text-base font-medium text-[#E09AAE]'>-{coupon.discountPercentage}%</dd>
 						</dl>
 					)}
-					<dl className='flex items-center justify-between gap-4 border-t border-gray-600 pt-2'>
-						<dt className='text-base font-bold text-white'>Total</dt>
-						<dd className='text-base font-bold text-emerald-400'>${formattedTotal}</dd>
+					<dl className='flex items-center justify-between gap-4 border-t border-[#FED7C3] pt-2'>
+						<dt className='text-base font-bold text-[#4B0F1F]'>Total</dt>
+						<dd className='text-base font-bold text-[#E09AAE]'>${formattedTotal}</dd>
 					</dl>
 				</div>
 
 				<motion.button
-					className='flex w-full items-center justify-center rounded-lg bg-emerald-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-300'
+					className='flex w-full items-center justify-center rounded-lg bg-[#E09AAE] px-5 py-2.5 text-sm font-medium text-white hover:bg-[#D28A98] focus:outline-none focus:ring-4 focus:ring-[#E09AAE]'
 					whileHover={{ scale: 1.05 }}
 					whileTap={{ scale: 0.95 }}
 					onClick={handlePayment}
@@ -79,10 +79,10 @@ const OrderSummary = () => {
 				</motion.button>
 
 				<div className='flex items-center justify-center gap-2'>
-					<span className='text-sm font-normal text-gray-400'>or</span>
+					<span className='text-sm font-normal text-[#D28A98]'>or</span>
 					<Link
 						to='/'
-						className='inline-flex items-center gap-2 text-sm font-medium text-emerald-400 underline hover:text-emerald-300 hover:no-underline'
+						className='inline-flex items-center gap-2 text-sm font-medium text-[#E09AAE] underline hover:text-[#D28A98] hover:no-underline'
 					>
 						Continue Shopping
 						<MoveRight size={16} />
